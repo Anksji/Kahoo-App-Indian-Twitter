@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">Kahoo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="YOUTUBE_API_KEY">AIzaSyCW4OGDXtToCtnGaXZRLMVkAtLOvptZk_g</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="JOIN_KAHOO">Join Kahoo</string>
+    <string name="ACCEPT_TERMS">Please accept privacy and term of use</string>
+    <string name="ENTER_VALID_NUMBER">Please enter valid number</string>
+    <string name="UNIQUE_USER_ID">\@Kahoo_handle</string>
+    <string name="ENTER_PHONE_NUMBER">Enter Phone Number</string>
+    <string name="WRITE_SOMETHING_ABOUT_YOURSELF">Write Something About Yourself</string>
+    <string name="BIRTH_DAY_HINT">DD/MM/YYYY</string>
+    <string name="FIRST_INFO_MSG">Enter your name, which you want to be called on Kahoo App.</string>
+    <string name="SET_UNIQUE_USER_ID">Set user unique ID</string>
+    <string name="EDIT_PROFILE">Edit Profile</string>
+    <string name="ENTER_YOUR_NAME">Your Name</string>
+    <string name="USERNAME">Username</string>
+    <string name="USER_ID">User Kahoo Handle</string>
+    <string name="USER_PHONE_NUMBER">Phone Number</string>
+    <string name="EMAIL">Email</string>
+    <string name="ENTER_YOUR_EMAIL">Enter Your Email</string>
+    <string name="BIRTH_DAY">Birthday</string>
+    <string name="ABOUT_ME">About Me</string>
+    <string name="SAVE">Save</string>
+    <string name="GIVE_PERMISSION">Give permission to proceed next</string>
+    <string name="PROFILE_UPDATED_SUCCESS">Profile Updated Successfully</string>
+    <string name="CREATE_SUCCESSFULLY">Profile Created Successfully</string>
+    <string name="PLEASE_ENTER_YOUR_UNIQUE_ID">Please your unique Kahoo Handle</string>
+    <string name="POST_YOUR_KAHOO">Create Your Kahoo</string>
+    <string name="CANCEL">Cancel</string>
+
+
+    <string name="default_notification_channel_id">234KfAeopofs43ternoti3</string>
+    <string name="file_provider_name">com.kahoo.bharat.img</string>
+    <string name="camera_file_provider_name">com.kahoo.bharatapp.cam.provider</string>
+    <string name="KEEP_WRITING">KEEP WRITING</string>
+    <string name="YOUR_VOICE_NOT_SAVED_ARE_YOU_WANT_TO_EXIT">Your voice is not saved yet, Are you sure to exit?</string>
+    <string name="PLEASE_ADD_DATA">Please write something or add media to create post</string>
+    <string name="YOUR_KAHOO_SEND">Your Kahoo Send Successfully.</string>
+    <string name="CLICK_HERE_TO_ADD_IMAGE">Click here to select image</string>
+    <string name="PERMISSION_SNACK_BAR_MSG">Please give permission to proceed</string>
+    <string name="REPLIES">Replies</string>
+    <string name="share_your_thoughts">Share your Thoughts</string>
+    <string name="ENABLE">ENABLE</string>
+    <string name="CAMERA">Camera</string>
+    <string name="GALLERY">Gallery</string>
+    <string name="VIDEO">Video</string>
+    <string name="ONLY_SORT_VIDEO_LESS_TEN30_SEC">Kahoo allowed less than 30 sec sort videos voice.</string>
+    <string name="ONLY_ONE_VIDEO_IN_ONE_POST">Only one video should be in a kahoo</string>
+    <string name="VIDEO_REMOVED_SUCCESS">Video removed successfully, Now you can add new one.</string>
+    <string name="VIDEO_REMOVE_IS_IN_PROGRESS">Video removing is in progress</string>
+    <string name="EDIT_YOUR_KAHOO">Edit Your Kahoo</string>
+    <string name="DOBARA_KAHOO">Dobara Kahoo</string>
+    <string name="DOBARA_KAHOO_TITLE">Dobara Kahoo</string>
+    <string name="KAHOO_THREAD">Kahoo Thread</string>
+
+    <string-array name="user_help_info">
+        <item>Enter your name, which you want to be called on Kahoo App.</item>
+        <item>Choose your unique Kahoo id, Which helps you to identify uniquely on the Kahoo app. It can be like @yourname.</item>
+        <item>Ensure your number is correct, So that you can easily recover your account.</item>
+        <item>Enter your Email, to strengthen your profile.</item>
+        <item>Enter your Date of Birth, so people can take more interest on you.</item>
+        <item>Tell the people of Kahoo about yourself and attract their attention.</item>
+    </string-array>
+
+    <string name="added">added</string>
+    <string name="modified">modified</string>
+    <string name="removed">removed</string>
+    <string name="USER_ID_NOT_ACTIVE">This user is not active yet</string>
+    <string name="ARE_U_SURE_TO_DELETE">Are you sure to delete this kahoo?</string>
+    <string name="NO_TEXT">NO, CANCEL</string>
+    <string name="YES_DELETE">YES, DELETE</string>
+    <string name="KAHOO_SUCCESS_FULLY_DELETED">Kahoo Successfully Deleted</string>
+    <string name="STARTED_FOLLOWING_SUCCESS">Successfully started following</string>
+    <string name="NOW_UNFOLLOWED_SUCCESS">Unfollow Successfully</string>
+    <string name="REPORT">REPORT</string>
+    <string name="CANCEL_CAPS">CANCEL</string>
+    <string name="ADD_YOUR_CONCERN">Add your concern</string>
+    <string name="REPORT_THIS_KAHOO">Report This Kahoo</string>
+    <string name="REPORT_SUBMITTED_SUCCESSFULLY">Report Submitted Successfully</string>
+    <string name="title_activity_share">ShareActivity</string>
+    <string name="title_activity_youtube_play_video_screen">YoutubePlayVideoScreen</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="SEARCH_TEXT">Search Here...</string>
+    <string name="MENU">More Options</string>
+    <string name="HOME">Home</string>
+    <string name="ADD_NEW_KAHOO">Add New Kahoo</string>
+    <string name="EXPLORE">Explore</string>
+    <string name="CREATE_YOUR_ZONE">Create Your Zone</string>
+    <string name="LIVE_SEMINAR">Live Seminar</string>
+    <string name="CREATE_YOUR_BOT_AI">Create Your Bot AI</string>
+    <string name="VIDEO_KAHOO_CANT_POSTED">Video Kahoo is not supported on this device</string>
+
+    <string name="ARE_YOU_SURE_TO_LOGOUT">Are you sure to logout?</string>
+    <string name="LOGOUT">LOGOUT</string>
+
+</resources>

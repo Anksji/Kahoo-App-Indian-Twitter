@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.Search.SearchFragment">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        app:cardCornerRadius="@dimen/_32sdp"
+        android:elevation="@dimen/_8sdp"
+        android:id="@+id/search_layout"
+        android:layout_margin="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_primary_500">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:elevation="@dimen/_10sdp"
+                android:maxLines="1"
+                android:imeOptions="actionSearch"
+                android:id="@+id/search_text"
+                android:singleLine="true"
+                android:paddingRight="@dimen/_60sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColorHint="@color/grey_300"
+                android:background="@color/dark_primary_500"
+                android:hint="@string/SEARCH_TEXT"/>
+
+            <ImageView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/ic_search"
+                android:padding="@dimen/_12sdp"
+                android:elevation="@dimen/_12sdp"
+                android:id="@+id/search_btn"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="1dp"
+                android:background="@drawable/primary_circle_btn"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:elevation="@dimen/_10sdp"
+        android:layout_below="@+id/search_layout"
+        android:id="@+id/hash_list"/>
+</RelativeLayout>

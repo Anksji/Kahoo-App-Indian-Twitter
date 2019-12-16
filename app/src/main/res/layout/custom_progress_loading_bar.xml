@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/gift_animation"
+        android:layout_width="@dimen/_102sdp"
+        android:layout_height="@dimen/_102sdp"
+        app:lottie_rawRes="@raw/loading_anim"
+        app:lottie_autoPlay="true"
+        android:layout_centerInParent="true"
+        app:lottie_loop="true"
+        />
+
+</RelativeLayout>

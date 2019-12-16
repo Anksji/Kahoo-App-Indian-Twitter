@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/bg_bottom_shadow">
+            <ImageView
+                android:id="@+id/ivBack"
+                style="@style/backIconStyle"
+                />
+            <TextView
+                android:id="@+id/cmt_heading"
+                style="@style/tollbarHeadingTitle"
+                android:layout_margin="0dp"
+                android:layout_toEndOf="@id/ivBack"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@id/ivBack"
+                android:layout_alignBottom="@id/ivBack"
+                android:gravity="center"
+                android:textSize="@dimen/da_font_size_xlarge"
+                android:text="@string/REPLIES" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/user_image"
+                android:src="@drawable/ic_user"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:id="@+id/user_name"
+                    android:text="User Name"
+                    />
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_200"
+                    android:textSize="14sp"
+                    android:id="@+id/user_comment"
+                    android:text="Comment Content"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comment_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_50sdp"
+            android:paddingTop="@dimen/_14sdp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"/>
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:id="@+id/loading_progress"/>
+    <include layout="@layout/rply_layout_bottom" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

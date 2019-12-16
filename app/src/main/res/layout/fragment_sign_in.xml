@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Auth.Fragments.LandingFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/stars"
+        android:rotation="30"/>
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/second_2"
+        android:id="@+id/img"
+        android:layout_centerHorizontal="true"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/img"
+        android:background="@drawable/round_rectangle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32dp"
+            android:text="Sign In"
+            android:id="@+id/sing_title"
+            android:textColor="@color/background"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_below="@+id/sing_title"
+            android:text="Enter Your Phone Number"
+            android:id="@+id/sub_head"
+            android:textColor="@color/background"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/sub_head"
+            android:layout_marginTop="60dp"
+            android:id="@+id/phone_layout"
+            android:padding="8sp"
+            android:background="@drawable/edit_field_rectangle">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp"
+                android:textColor="@color/grey_800"
+                android:background="@android:color/transparent"
+                android:text="+91"/>
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@color/grey_800" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sub_head"
+                android:textSize="20sp"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:background="@color/transparent"
+                android:id="@+id/user_phone_number"
+                android:lineSpacingExtra="5dp"
+                android:inputType="number"
+                android:textColor="@color/grey_800"
+                android:hint="Phone Number"/>
+        </LinearLayout>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree to Kahoo app Terms of Service and Privacy Policy"
+            android:layout_gravity="top"
+            android:gravity="top"
+            android:layout_below="@+id/phone_layout"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:id="@+id/agree_terms"
+            android:textColor="@color/grey_600"/>
+
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/primary_rect_button"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:id="@+id/send_otp_btn"
+            android:elevation="6dp"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/white"
+            android:layout_gravity="bottom|center_horizontal"
+            android:text="Send OTP"/>
+
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

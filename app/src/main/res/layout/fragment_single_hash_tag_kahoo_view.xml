@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:overScrollMode="never"
+    android:orientation="vertical"
+    tools:context=".UI.KahooUi.ViewingKahoo.SingleDetailKahooView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:id="@+id/top_bar"
+        android:background="@drawable/bg_bottom_shadow">
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_centerVertical="true"
+            style="@style/backIconStyle"/>
+        <TextView
+            android:id="@+id/heading"
+            style="@style/tollbarHeadingTitle"
+            android:layout_margin="0dp"
+            android:layout_toEndOf="@id/ivBack"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@id/ivBack"
+            android:layout_alignBottom="@id/ivBack"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/KAHOO_THREAD" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_6sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingRight="@dimen/_16sdp"
+        android:id="@+id/hash_tag_back"
+        android:layout_below="@+id/top_bar"
+        android:elevation="4dp"
+        android:background="@drawable/selected_white_back"
+        android:paddingLeft="@dimen/_16sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_500"
+            android:textStyle="bold"
+            android:text="#all"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/_14sdp"
+            android:id="@+id/tag_title"/>
+
+
+    </RelativeLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipe_to_refresh"
+        android:layout_below="@+id/hash_tag_back">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/skimmer_loading_animation"
+                    android:id="@+id/skimmer_view"/>
+            </RelativeLayout>
+            <com.kaho.app.UI.CustomViews.ExoPlayerRecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:overScrollMode="never"
+                android:id="@+id/kahoo_list_rv"
+                />
+
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/empty_animation"
+        android:visibility="gone">
+        <include layout="@layout/empty_layout"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/player_view"
+        android:elevation="@dimen/_10sdp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/overlay_dark_60"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:id="@+id/center_view"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_400sdp"
+                android:id="@+id/media_view"
+                android:background="@color/dark_primary_500" >
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/idExoPlayerVIew"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_8sdp"
+                    android:elevation="@dimen/_3sdp"
+                    />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/media_image"
+                    android:visibility="gone"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:elevation="@dimen/_10sdp"
+                    android:src="@color/primary_500"/>
+
+                <ImageView
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:elevation="@dimen/_10sdp"
+                    android:id="@+id/left_move"
+                    android:scaleX="-1"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_centerVertical="true"
+                    app:tint="@color/white" />
+
+                <ImageView
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:src="@drawable/ic_left_arrow"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/right_move"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:elevation="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    app:tint="@color/white" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="@dimen/_52sdp"
+            android:layout_height="@dimen/_52sdp"
+            android:elevation="@dimen/_6sdp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/close_media_view"
+            android:layout_above="@+id/center_view"
+            android:background="@drawable/primary_circle_btn">
+
+            <ImageView
+                android:layout_width="@dimen/_42sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:src="@drawable/ic_close"
+                android:padding="@dimen/_2sdp"
+                android:layout_centerInParent="true"
+                app:tint="@color/white" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/center_view"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:id="@+id/media_index"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_centerHorizontal="true"
+            android:text="7/8"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

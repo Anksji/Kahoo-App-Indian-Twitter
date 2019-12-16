@@ -1,0 +1,153 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.kaho.app"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 5
+        versionName "1.0.05"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        useLibrary 'org.apache.http.legacy'
+        ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    viewBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.3'
+    implementation 'androidx.navigation:navigation-ui:2.3.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.wear:wear:1.0.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    implementation "com.google.firebase:firebase-core:18.0.2"
+    implementation "com.google.firebase:firebase-auth:20.0.3"
+    implementation "com.google.firebase:firebase-firestore:22.1.1"
+    implementation "com.google.android.gms:play-services-auth:19.0.0"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation platform('com.google.firebase:firebase-bom:26.5.0')
+    implementation 'com.google.firebase:firebase-database:19.6.0'
+
+    //Google Play Services for Maps
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    // Google play services for location information
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+    //geo firestore near by query
+    implementation 'uk.co.mgbramwell.geofire:geofire-android:0.0.2'
+    //implementation 'com.github.imperiumlabs:GeoFirestore-Android:v1.5.0'
+
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    //firebase functions
+    implementation 'com.google.firebase:firebase-functions:19.2.0'
+
+    // Recommended: Add the Firebase SDK for Google Analytics.
+    implementation 'com.google.firebase:firebase-analytics:18.0.2'
+    // Add the Firebase Crashlytics SDK.
+    //implementation 'com.google.firebase:firebase-crashlytics:17.3.1'
+    //firebase performance
+    implementation 'com.google.firebase:firebase-perf:19.1.1'
+
+    //circle image view
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //image compressor
+    implementation 'id.zelory:compressor:2.1.0'
+    
+    //image cropper
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+
+    implementation 'com.firebaseui:firebase-ui-storage:4.3.2'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    //lottie animation
+    implementation 'com.airbnb.android:lottie:3.4.0'
+
+    implementation 'com.google.firebase:firebase-storage-ktx:19.2.1'
+    implementation 'com.google.firebase:firebase-firestore-ktx:22.1.0'
+
+    implementation "androidx.browser:browser:1.3.0"
+
+    implementation 'org.apache.httpcomponents:httpmime:4.0-alpha3'
+    //ffmpeg android
+    //implementation project(':FFmpegAndroid-0.3.2')
+    implementation project(':android-ffmpeg')
+
+    // dependancy for exoplayer
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.12.0'
+    // for core support in exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.12.0'
+    // for adding dash support in our exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.12.0'
+    // for adding hls support in exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.12.0'
+    // for smooth streaming of video in our exoplayer.
+    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.12.0'
+    // for generating default ui of exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.12.0'
+
+    /*//exoplay video play
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.12.0'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.12.0'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.12.0'
+*/
+    // Facebook loading Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    //rich link web url preview fetch
+    implementation 'org.jsoup:jsoup:1.11.3'
+    implementation project(":library")
+
+    implementation 'io.github.ponnamkarthik:richlinkpreview:1.0.9'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.github.HaarigerHarald:android-youtubeExtractor:v1.7.0'
+
+
+    // implementation 'com.leocardz:link-preview:2.0.0@aar'
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'

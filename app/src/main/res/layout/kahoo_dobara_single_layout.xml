@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/content"
+        android:layout_marginLeft="@dimen/_16sdp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:elevation="@dimen/_3sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:id="@+id/user_image"
+                    android:src="@color/white"
+                    android:scaleType="centerCrop"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_primary_200"
+                android:text="in reply to yuva"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:visibility="gone"
+                android:id="@+id/reply_text"
+                android:drawablePadding="@dimen/_4sdp"
+                android:drawableLeft="@drawable/ic_reply_small"
+                android:layout_marginBottom="-6dp"
+                android:textSize="@dimen/_14sdp"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:text="Name Belongs"
+                    android:id="@+id/user_name_handle_time_head"
+                    android:textSize="@dimen/_15sdp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_below="@+id/user_name_handle_time_head"
+                    android:text="We are posting content to new kahoo app"
+                    android:id="@+id/user_kahoo_content"
+                    android:autoLink="web"
+                    android:linksClickable="true"
+                    android:textColorLink="@color/primary_200"
+                    android:textSize="@dimen/_14sdp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    android:id="@+id/link_preview_layout"
+                    android:background="@color/dark_primary_500"
+                    android:visibility="gone"
+                    android:layout_below="@+id/user_kahoo_content"
+                    android:elevation="@dimen/_3sdp">
+                    <ImageView
+                        android:layout_width="@dimen/_42sdp"
+                        android:layout_height="@dimen/_42sdp"
+                        android:src="@drawable/ic_play"
+                        android:elevation="@dimen/_10sdp"
+                        android:padding="@dimen/_8sdp"
+                        android:visibility="gone"
+                        android:id="@+id/link_video_play"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:id="@+id/preview_title"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/white"
+                        android:text="The title of web link url The title of web link url"
+                        android:padding="@dimen/_4sdp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:elevation="@dimen/_10sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:layout_gravity="bottom"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:scaleType="centerCrop"
+                        android:scaleY="-1"
+                        android:elevation="@dimen/_8sdp"
+                        android:layout_gravity="bottom"
+                        android:src="@drawable/vertical_gradient"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_120sdp"
+                            android:id="@+id/link_preview"
+                            android:src="@color/primary_500"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentBottom="true"
+                            android:scaleX="-1"
+                            android:visibility="gone"
+                            android:background="@drawable/corner_gradient"/>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/web_click"
+                            android:visibility="gone"                       android:elevation="@dimen/_12sdp"
+                            android:background="@drawable/storke_rectangle">
+
+                            <ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:src="@drawable/ic_reply"
+                                android:scaleX="-1"
+                                android:id="@+id/share"
+                                android:layout_marginTop="-10dp"
+                                android:layout_centerInParent="true"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_below="@+id/share"
+                                android:textStyle="bold"
+                                android:textColor="@color/dark_primary_50"
+                                android:textSize="@dimen/_12sdp"
+                                android:text="Visit"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:src="@drawable/ic_arrow"
+                    android:id="@+id/more_option_btn"
+                    app:tint="@color/dark_primary_200"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/kaho_media_content_holder"
+                android:layout_marginLeft="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:elevation="@dimen/_3sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp">
+                    <FrameLayout
+                        android:id="@+id/mediaContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:gravity="center"
+                        android:scaleType="center"
+                        >
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="gone"
+                            style="?android:attr/progressBarStyle"
+                            />
+
+
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/ivVolumeControl"
+                        android:layout_width="@dimen/_38sdp"
+                        android:layout_height="@dimen/_38sdp"
+                        android:layout_gravity="start|bottom"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:padding="@dimen/_6sdp"
+                        android:layout_alignParentBottom="true"
+                        android:alpha="1"
+                        android:elevation="@dimen/_8sdp"
+                        android:animateLayoutChanges="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_volume_on"
+                        />
+                    <ImageView
+                        android:layout_width="@dimen/_52sdp"
+                        android:layout_height="@dimen/_52sdp"
+                        android:id="@+id/video_controle"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_16sdp"
+                        android:elevation="@dimen/_8sdp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_play"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_140sdp"
+                        android:id="@+id/kahoImgHolder"
+                        android:src="@color/dark_primary_400"
+                        android:scaleType="centerCrop"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:scaleX="-1"
+                        android:elevation="@dimen/_10sdp"
+                        android:id="@+id/more_img_gradient"
+                        android:background="@drawable/corner_gradient"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/more_img_layout"
+                        android:elevation="@dimen/_12sdp"
+                        android:background="@drawable/storke_rectangle">
+
+                        <ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:src="@drawable/ic_plus"
+                            android:id="@+id/plus_symbol"
+                            android:layout_marginTop="-10dp"
+                            android:layout_centerInParent="true"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/plus_symbol"
+                            android:textStyle="bold"
+                            android:id="@+id/media_count"
+                            android:textColor="@color/dark_primary_50"
+                            android:textSize="@dimen/_12sdp"
+                            android:text="1/7 more"/>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.kaho.app.UI.CustomViews.ExoPlayerRecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content"
+        android:layout_marginLeft="@dimen/_24sdp"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:id="@+id/other_kahoo_list"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/likes_reply"
+        android:layout_below="@+id/other_kahoo_list"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/ripple_circle_selector"
+            android:id="@+id/reply_btn"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_primary_200"
+                android:text="24"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:id="@+id/reply_count_reply"
+                android:drawablePadding="@dimen/_4sdp"
+                android:drawableLeft="@drawable/ic_reply_outline"
+                android:textSize="@dimen/_15sdp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/ripple_circle_selector"
+            android:id="@+id/dobara_kaho_btn"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_primary_200"
+                android:text="24"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:id="@+id/dobara_kaho_count"
+                android:drawablePadding="@dimen/_4sdp"
+                android:drawableLeft="@drawable/ic_dobara_kahoo"
+                android:textSize="@dimen/_15sdp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/ripple_circle_selector"
+            android:id="@+id/like_btn"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/heart_symbol"
+                android:src="@drawable/ic_heart"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_primary_200"
+                android:text="24"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:id="@+id/like_count_like"
+
+                android:textSize="@dimen/_15sdp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/ripple_circle_selector"
+            android:id="@+id/share_btn"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/share_symbol"
+                android:src="@drawable/ic_share"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_primary_200"
+                android:text="24"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:id="@+id/share_count"
+                android:textSize="@dimen/_15sdp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/likes_reply"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:id="@+id/divider"
+        android:background="@color/dark_primary_50"/>
+
+</RelativeLayout>

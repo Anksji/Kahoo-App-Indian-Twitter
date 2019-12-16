@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_margin="@dimen/_8sdp"
+        android:elevation="@dimen/_3sdp"
+        android:layout_centerHorizontal="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/mediaContainer"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/black"
+                android:gravity="center"
+                android:scaleType="center"
+                >
+
+                <ImageView
+                    android:id="@+id/ivMediaCoverImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/dark_primary_500"
+                    android:scaleType="centerCrop"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    style="?android:attr/progressBarStyle"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivVolumeControl"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:alpha="0"
+                    android:animateLayoutChanges="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_volume_on"
+                    />
+            </FrameLayout>
+            <!--<com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/selected_video"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </com.google.android.exoplayer2.ui.PlayerView>-->
+
+            <!--<ImageView
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_centerInParent="true"
+                android:id="@+id/video_controle"
+                android:src="@drawable/exo_controls_pause"/>-->
+            <ImageView
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:id="@+id/video_controle"
+                android:layout_gravity="center"
+                android:elevation="@dimen/_5sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/exo_controls_play"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:scaleType="centerCrop"
+                android:id="@+id/selected_image"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/clear_selected_media"
+                android:src="@drawable/ic_close"
+                android:padding="4dp"
+                app:tint="@color/kaho_red" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

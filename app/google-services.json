@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "585059831508",
+    "firebase_url": "https://kaho-bharat-app-default-rtdb.firebaseio.com",
+    "project_id": "kaho-bharat-app",
+    "storage_bucket": "kaho-bharat-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585059831508:android:ad6c90af6f93dbb5a6b541",
+        "android_client_info": {
+          "package_name": "com.kaho.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585059831508-jqv97r908srvol7o6ttpklk2677jv5t0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kaho.app",
+            "certificate_hash": "adda9c8a763d72f858ffa7659c336575c8d11225"
+          }
+        },
+        {
+          "client_id": "585059831508-f38enrj94lmjrjcgc59f1ifum7t42rq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0uq4tCD-bOXqLW9BNZ6NyEiIPGmL--YI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585059831508-f38enrj94lmjrjcgc59f1ifum7t42rq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585059831508:android:5e2d752b1f97f2b3a6b541",
+        "android_client_info": {
+          "package_name": "com.kahoo.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585059831508-f38enrj94lmjrjcgc59f1ifum7t42rq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0uq4tCD-bOXqLW9BNZ6NyEiIPGmL--YI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585059831508-f38enrj94lmjrjcgc59f1ifum7t42rq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

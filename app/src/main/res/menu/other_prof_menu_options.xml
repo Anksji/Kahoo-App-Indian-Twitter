@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/ic_menu"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+
+            <item
+                android:id="@+id/share_profile"
+                android:orderInCategory="100"
+                android:title="Share Profile"
+                android:icon="@drawable/ic_share_2"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/kahoo_at"
+                android:orderInCategory="100"
+                android:title="Kahoo"
+                android:icon="@drawable/kaho_small_icon"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/mute_at"
+                android:orderInCategory="100"
+                android:title="Mute at"
+                android:icon="@drawable/ic_volume"
+                app:showAsAction="never"/>
+
+
+            <item
+                android:id="@+id/block_at"
+                android:orderInCategory="100"
+                android:title="Block at"
+                android:icon="@drawable/ic_block"
+                app:showAsAction="never"/>
+
+
+            <item
+                android:id="@+id/report_at"
+                android:orderInCategory="100"
+                android:title="Report at"
+                android:icon="@drawable/ic_flag_report"
+                app:showAsAction="never"/>
+
+
+        </menu>
+    </item>
+
+
+
+</menu>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme"
+    android:background="@color/transparent"
+    >
+
+    <LinearLayout
+        android:layout_width="300sp"
+        android:padding="24dp"
+        android:layout_centerInParent="true"
+        android:background="@color/dark_primary_800"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:id="@+id/message"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableLeft="@drawable/ic_warning"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/REPORT_THIS_KAHOO"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:src="@drawable/edittext"
+                android:layout_below="@+id/top_bar"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:id="@+id/edit_back_img"
+                app:tint="@color/background" />
+
+            <EditText
+                android:id="@+id/kahoo_report_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                style="@style/createkahooEditText"
+                android:layout_below="@+id/top_bar"
+                android:gravity="top"
+                android:maxLength="500"
+                android:layout_marginTop="10dp"
+                android:inputType="textImeMultiLine|textCapSentences|textMultiLine"
+                android:scrollbars="vertical"
+                android:hint="Type your post"
+                android:focusable="true"
+                android:background="@color/transparent"
+                android:singleLine="false"
+                >
+                <requestFocus/>
+            </EditText>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@+id/message">
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:padding="@dimen/_6sdp"
+                android:textColor="@color/white"
+                android:id="@+id/cancle"
+                android:textStyle="bold"
+                android:text="@string/CANCEL_CAPS"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:padding="@dimen/_6sdp"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:textColor="@color/primary_500"
+                android:id="@+id/report"
+                android:textStyle="bold"
+                android:text="@string/REPORT"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

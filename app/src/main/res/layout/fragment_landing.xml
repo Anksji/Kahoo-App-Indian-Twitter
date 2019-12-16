@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Auth.Fragments.LandingFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/stars"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:background="@drawable/round_rectangle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32dp"
+            android:text="Hi, Welcome"
+            android:textColor="@color/background"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Let's Join Kahoo Bharat"
+            android:textColor="@color/background"/>
+
+        <ImageView
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:src="@drawable/first_1"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/primary_rect_button"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:elevation="6dp"
+            android:textSize="18sp"
+            android:id="@+id/join_kahoo"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/JOIN_KAHOO"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
